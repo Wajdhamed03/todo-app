@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+button.done {
+  background: #4caf50;
+  color: white;
+}
+
+button.delete {
+  background: #f44336;
+  color: white;
+}
+
+.date {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* 🌙 Dark Mode */
+.app.dark {
+  background-color: #121212;
+  color: #f5f5f5;   /* النص أبيض */
+}
+
+.app.dark h1,
+.app.dark p,
+.app.dark span,
+.app.dark li {
+  color: #f5f5f5;   /* كل النصوص بيضاء */
+}
+
+.app.dark input {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #444;
+}
+
+.app.dark input::placeholder {
+  color: #bbb;   /* لون الـ placeholder أوضح */
+}
+
+.app.dark button {
+  background-color: #333;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+
+.app.dark li.completed span {
+  color: #888; /* لو المهمة منتهية يكون لونها رمادي */
+}
+/* مهام الليست في الوضع الداكن */
+.app.dark li {
+  background-color: #1e1e1e; /* صندوق غامق */
+  color: #f5f5f5;           /* النص أبيض */
+  border: 1px solid #444;   /* حدود خفيفة */
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+/* المهمة المنجزة */
+.app.dark li.completed span {
+  color: #888;  /* رمادي فاتح */
+  text-decoration: line-through;
+}
